@@ -37,10 +37,15 @@ public class TeacherServiceTest {
 
     @Test
     public void shouldFindById() throws Exception{
+
         Teacher teach = new Teacher("Priya",32,"Female");
         this.service.create(teach);
-        Teacher teacher = this.service.findById(5);
-        assertEquals(5,teach.getId());
+        //Teacher teacher = this.service.findById(5);
+
+        this.service.findById(1);
+        assertEquals(1,teach.getId());
     }
+
+
 
 }
