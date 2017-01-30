@@ -3,6 +3,7 @@ package com.allstate.entities;
 import com.allstate.enums.Department;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.ManyToAny;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
@@ -22,8 +23,7 @@ public class Klass {
     private double fee;
     private Date created;
     private Date modified;
-
-    //@Enumerated(EnumType.STRING)
+    private Teacher teacher;
 
     public Klass() {}
 
@@ -78,5 +78,8 @@ public class Klass {
     public Date getModified() { return modified; }
     public void setModified(Date modified) {this.modified = modified; }
 
-
+    @ManyToOne
+    @JoinColumn(name = "teacher_id")
+    public Teacher getTeacher() { return teacher; }
+    public void setTeacher(Teacher teacher) { this.teacher = teacher; }
 }

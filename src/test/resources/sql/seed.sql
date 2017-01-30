@@ -13,7 +13,7 @@ insert into klasses (credits, department, fee, name, semester) values
   (2, 'SCIENCE', 430.0, 'Calculus 101', '2019-01-25 00:00:00');
 
 INSERT INTO teachers (name, age, gender) values
-  ('Andreas',32,'Male'),
-  ('Chyld', 40, 'Male'),
-  ('Nathan', 29, 'Male'),
-  ('Swarna', 23, 'Female');
+  ('Andreas',32,'MALE'),
+  ('Chyld', 40, 'MALE'),
+  ('Nathan', 29, 'MALE'),
+  ('Swarna', 23, 'FEMALE');
